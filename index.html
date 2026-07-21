@@ -4,77 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>พอร์ตโฟลิโอ - พิมพ์ญาดา มีเลี้ยง</title>
-    <!-- แก้ไขลิงก์ CSS ให้ถูกต้อง -->
     <link rel="stylesheet" href="style.css">
-    <!-- แก้ไขลิงก์ฟอนต์ให้ถูกต้อง -->
+    <!-- ฟอนต์เหมือนต้นแบบ -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="logo">KU</div>
-            <nav class="nav-menu">
-                <a href="#home" class="nav-link">หน้าแรก</a>
-                <a href="#about" class="nav-link">ประวัติส่วนตัว</a>
-                <a href="#education" class="nav-link">ประวัติการศึกษา</a>
-                <a href="#works" class="nav-link">แฟ้มผลงาน</a>
-                <a href="#contact" class="nav-link">ช่องทางติดต่อ</a>
-                <a href="#" class="btn-recruit">KU_RECRUIT_2026</a>
-            </nav>
+    <!-- แถบเมนูนำทาง -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="nav-brand">
+                <span class="brand-logo">KU</span>
+                <span class="brand-text">PIMYADA หน้าแรก</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">ประวัติส่วนตัว</a></li>
+                <li><a href="#education">ประวัติการศึกษา</a></li>
+                <li><a href="#portfolio">แฟ้มผลงาน</a></li>
+                <li><a href="#contact">ช่องทางติดต่อ</a></li>
+                <li><a href="#" class="btn-recruit">KU_RECRUIT_2026</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">ประวัติส่วนตัว</h2>
-                <div class="about-grid">
-                    <div class="card bio-card">
-                        <h3 class="card-subtitle">STUDIO BIO-DATA</h3>
-                        <h4 class="card-title">ข้อมูลผู้สมัครเรียน</h4>
-                        <div class="bio-row">
+    <!-- หน้าแรก -->
+    <section id="home" class="section home-section">
+        <div class="container home-container">
+            <div class="home-content">
+                <span class="badge">KASETSART UNIVERSITY ADMISSION</span>
+                <h1 class="home-title">นางสาวพิมพ์ญาดา มีสื้อ</h1>
+                <p class="home-subtitle">PORTFOLIO FOR EDUCATION <span class="line"></span></p>
+                <p class="home-desc">ขอต้อนรับคณะกรรมการเข้าสู่พื้นที่ถ่ายทอดตัวตนของฉันค่ะ แฟ้มสะสมผลงานเล่มนี้สะท้อนถึงการเรียนรู้ ประสบการณ์ และความพร้อมที่จะนำความรู้มาต่อยอดพัฒนาตนเองใน มหาวิทยาลัยเกษตรศาสตร์ แห่งนี้ค่ะ
+                </p>
+                <div class="home-buttons">
+                    <a href="#portfolio" class="btn btn-primary">รวบรวมผลงานและผล <i class="fas fa-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-secondary">เป้าหมาย</a>
+                </div>
+            </div>
+            <div class="home-card-wrapper">
+                <div class="home-card">
+                    <span class="card-text">PIMYADA</span>
+                    <span class="card-badge">PIMYADA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ประวัติส่วนตัว -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-heading">
+                <i class="fas fa-user icon-heading"></i> ประวัติส่วนตัว
+            </h2>
+            <div class="about-grid">
+                <div class="card bio-card">
+                    <h3 class="card-sub">STUDIO BIO-DATA</h3>
+                    <h4 class="card-title">ข้อมูลผู้สมัครเรียน</h4>
+                    <div class="bio-list">
+                        <div class="bio-item">
                             <span class="bio-label">ชื่อ-นามสกุล :</span>
                             <span class="bio-value">นางสาวพิมพ์ญาดา มีเลี้ยง</span>
                         </div>
-                        <div class="bio-row">
+                        <div class="bio-item">
                             <span class="bio-label">โรงเรียน :</span>
-                            <span class="bio-value">กระทุ่มแบน "วิเศษสุบคุณ"</span>
+                            <span class="bio-value">กระทุ่มแบน "วิเศษสมุทคุณ"</span>
                         </div>
-                        <div class="bio-row">
+                        <div class="bio-item">
                             <span class="bio-label">แผนการเรียน :</span>
                             <span class="bio-value">คณิต-อังกฤษ</span>
                         </div>
-                        <p class="card-footer">MEMBER RECORD // KU APPLICANT</p>
                     </div>
+                    <p class="card-footer">MEMBER RECORD // KU APPLICANT</p>
+                </div>
 
-                    <div class="card motive-card">
-                        <h3 class="card-subtitle">TARGET MOTIVE</h3>
-                        <h4 class="card-title">เป้าหมายสูงสุดในการศึกษาต่อ</h4>
-                        <p class="motive-text">
-                            “ฉันเชื่อว่าทุกโอกาสในการเรียนรู้จะช่วยให้เราเติบโตขึ้น การได้เป็นส่วนหนึ่งของมหาวิทยาลัยเกษตรศาสตร์จึงเป็นอีกหนึ่งเป้าหมายที่อยากทำให้สำเร็จ เพราะที่นี่จะช่วยให้ฉันได้พัฒนาความรู้ ทักษะ และก้าวเข้าใกล้ความฝันของตัวเองมากขึ้น”
-                        </p>
-                        <p class="card-footer">EDUCATIONAL MINDSET <span>BY PIMYADA 💚</span></p>
+                <div class="card motive-card">
+                    <h3 class="card-sub">TARGET MOTIVE</h3>
+                    <h4 class="card-title">เป้าหมายสูงสุดในการศึกษาต่อ</h4>
+                    <p class="motive-text">
+                        “ฉันเชื่อว่าทุกโอกาสในการเรียนรู้จะช่วยให้เราเติบโตขึ้น การได้เป็นส่วนหนึ่งของมหาวิทยาลัยเกษตรศาสตร์จึงเป็นอีกหนึ่งเป้าหมายที่อยากทำให้สำเร็จ เพราะที่นี่จะช่วยให้ฉันได้พัฒนาความรู้ ทักษะ และก้าวเข้าใกล้ความฝันของตัวเองมากขึ้น”
+                    </p>
+                    <div class="motive-footer">
+                        <span>EDUCATIONAL MINDSET</span>
+                        <span>BY PIMYADA 💚</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="education" class="section edu-section">
-            <div class="container">
-                <p class="section-tag">EDUCATION</p>
-                <h2 class="section-title">ประวัติการศึกษา</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot">2</div>
-                        <div class="timeline-content">
-                            <p class="edu-level">HIGH SCHOOL</p>
-                            <h4 class="edu-title">ระดับมัธยมศึกษาตอนปลาย</h4>
-                            <p class="edu-school">โรงเรียนกระทุ่มแบน "วิเศษสุบคุณ"</p>
-                        </div>
+    <!-- ประวัติการศึกษา -->
+    <section id="education" class="section edu-section">
+        <div class="container">
+            <p class="section-tag">EDUCATION</p>
+            <h2 class="section-heading">ประวัติการศึกษา</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <p class="edu-level">MIDDLE SCHOOL</p>
+                        <h4 class="edu-title">ระดับมัธยมศึกษาตอนต้น</h4>
+                        <p class="edu-school">โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</p>
+                    </div>
+                    <div class="timeline-dot">1</div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-content">
+                        <p class="edu-level">HIGH SCHOOL</p>
+                        <h4 class="edu-title">ระดับมัธยมศึกษาตอนปลาย</h4>
+                        <p class="edu-school">โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- แฟ้มผลงาน -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <p class="section-tag">PORTFOLIO</p>
+            <h2 class="section-heading">แฟ้มสะสมผลงาน</h2>
+            <p class="section-desc">[ คลิกที่รูปภาพเพื่อตรวจสอบผลงานและรายละเอียด ]</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <h3>Page 1</h3>
+                    <p class="card-page">CATALOG_PAGE_01</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Page 2</h3>
+                    <p class="card-page">CATALOG_PAGE_02</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Page 3</h3>
+                    <p class="card-page">CATALOG_PAGE_03</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Page 4</h3>
+                    <p class="card-page">CATALOG_PAGE_04</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Page 5</h3>
+                    <p class="card-page">CATALOG_PAGE_05</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Page 6</h3>
+                    <p class="card-page">CATALOG_PAGE_06</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Page 7</h3>
+                    <p class="card-page">CATALOG_PAGE_07</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Page 8</h3>
+                    <p class="card-page">CATALOG_PAGE_08</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Page 9</h3>
+                    <p class="card-page">CATALOG_PAGE_09</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Page 10</h3>
+                    <p class="card-page">CATALOG_PAGE_10</p>
+                </div>
+                <div class="portfolio-card">
+                    <h3>Page 11</h3>
+                    <p class="card-page">CATALOG_PAGE_11</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ช่องทางติดต่อ -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <p class="section-tag">CONNECTIONS</p>
+            <h2 class="section-heading">ช่องทางการติดต่อ</h2>
+            <div class="contact-grid">
+                <a href="#" class="contact-card">
+                    <i class="fab fa-facebook-f contact-icon fb"></i>
+                    <div>
+                        <p class="contact-title">FACEBOOK</p>
+                        <p class="contact-value">[Pimyada Meeliang]</p>
+                    </div>
+                </a>
+                <a href="#" class="contact-card">
+                    <i class="fab fa-instagram contact-icon ig"></i>
+                    <div>
+                        <p class="contact-title">INSTAGRAM</p>
+                        <p class="contact-value">[ppiimmyada_]</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนท้าย -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PIMYADA MEELIANG. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
 </body>
 </html>
