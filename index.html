@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio ของฉัน</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พอร์ตโฟลิโอของฉัน</title>
+    <!-- เชื่อมต่อไฟล์ตกแต่ง -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <h1>สวัสดีครับ 👋</h1>
-  <h2>ยินดีต้อนรับสู่ Portfolio ของฉัน</h2>
+    <!-- แถบเมนูนำทาง -->
+    <nav class="navbar">
+        <div class="logo">SU</div>
+        <ul class="nav-links">
+            <li><a href="#home">หน้าแรก</a></li>
+            <li><a href="#about">ประวัติส่วนตัว</a></li>
+            <li><a href="#education">ประวัติการศึกษา</a></li>
+            <li><a href="#works">แฟ้มผลงาน</a></li>
+            <li><a href="#contact">ช่องทางติดต่อ</a></li>
+            <li><a href="#" class="btn-recruit">SU_RECRUIT_2026</a></li>
+        </ul>
+    </nav>
 
-  <p>นี่คือเว็บไซต์ที่สร้างด้วย GitHub Pages</p>
+    <!-- ส่วนประวัติส่วนตัว -->
+    <section id="about" class="section">
+        <h2>ประวัติส่วนตัว</h2>
+        <div class="about-container">
+            <div class="bio-card">
+                <h3>ข้อมูลผู้สมัครเรียน</h3>
+                <p><strong>ชื่อ-นามสกุล:</strong> นางสาวพิมพ์ญาดา มีเลี้ยง</p>
+                <p><strong>โรงเรียน:</strong> กระทุ่มแบน "วิเศษสมุทคุณ"</p>
+                <p><strong>แผนการเรียน:</strong> วิทย์-คณิต</p>
+            </div>
+            <div class="motive-card">
+                <h3>เป้าหมายสูงสุดในการศึกษาต่อ</h3>
+                <p>"เป้าหมายสูงสุดของการเรียนต่อ ไม่ใช่แค่การได้มาซึ่งปริญญา แต่คือการได้หล่อหลอมตนเองในสถาบันที่มีคุณภาพอย่าง มหาวิทยาลัยเกษตรศาสตร์ เพื่อเปลี่ยนความชอบให้กลายเป็นความชำนาญ และต่อยอดไปสู่เส้นทางอาชีพที่ตั้งใจไว้อย่างสมบูรณ์"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนประวัติการศึกษา -->
+    <section id="education" class="section">
+        <h2>ประวัติการศึกษา</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="step">2</span>
+                <div class="timeline-content">
+                    <h4>ระดับมัธยมศึกษาตอนปลาย</h4>
+                    <p>โรงเรียนกระทุ่มแบน "วิเศษสุบคุณ"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- เชื่อมต่อไฟล์สคริปต์ -->
+    <script src="script.js"></script>
 </body>
 </html>
