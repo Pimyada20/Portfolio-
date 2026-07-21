@@ -1,4 +1,4 @@
-/* ตั้งค่าพื้นฐาน */
+/* ตั้งค่าพื้นฐานเหมือนตัวอย่าง */
 * {
     margin: 0;
     padding: 0;
@@ -6,130 +6,284 @@
     font-family: 'Noto Sans Thai', sans-serif;
 }
 
+:root {
+    --primary-green: #0F766E;
+    --dark-green: #064E3B;
+    --light-green: #D1FAE5;
+    --text-dark: #1E293B;
+    --text-light: #64748B;
+    --bg-light: #F8FAFC;
+    --white: #FFFFFF;
+}
+
 body {
-    background-color: #f8fafc;
-    color: #1e293b;
+    background-color: var(--bg-light);
+    background-image: 
+        linear-gradient(rgba(15, 118, 110, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 118, 110, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: var(--text-dark);
     line-height: 1.6;
 }
 
 /* แถบเมนู */
 .navbar {
+    background: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    justify-content: space-between;
 }
 
 .logo {
-    background-color: #0d9488;
-    color: white;
-    width: 32px;
-    height: 32px;
+    background: var(--primary-green);
+    color: var(--white);
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #334155;
+    font-weight: 700;
     font-size: 0.9rem;
 }
 
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--primary-green);
+}
+
 .btn-recruit {
-    background-color: #0d9488;
-    color: white !important;
-    padding: 0.5rem 1rem;
+    background: var(--primary-green);
+    color: var(--white) !important;
+    padding: 0.5rem 1.1rem;
     border-radius: 20px;
+    font-weight: 500;
 }
 
-/* ส่วนเนื้อหา */
+/* ส่วนเนื้อหาหลัก */
 .section {
-    padding: 2rem 5%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
 }
 
-.section h2 {
+.section-title {
     font-size: 1.8rem;
+    font-weight: 700;
     margin-bottom: 2rem;
-    border-bottom: 3px solid #0d9488;
-    display: inline-block;
     padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--primary-green);
+    display: inline-block;
 }
 
-.about-container {
+.section-tag {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+/* การ์ดส่วนประวัติ */
+.about-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 2rem;
+    gap: 1.8rem;
 }
 
+.card {
+    padding: 2rem;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-subtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+    opacity: 0.8;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.card-footer {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.card-footer span {
+    float: right;
+}
+
+/* การ์ดข้อมูลส่วนตัว */
 .bio-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background: var(--white);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
 }
 
+.bio-row {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.bio-label {
+    font-weight: 500;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+/* การ์ดเป้าหมาย */
 .motive-card {
-    background: #065f46;
-    color: white;
-    padding: 2rem;
-    border-radius: 16px;
+    background: var(--dark-green);
+    color: var(--white);
+    box-shadow: 0 4px 16px rgba(6,78,59,0.2);
+}
+
+.motive-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.motive-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    clip-path: circle(30% at right 70%);
 }
 
 /* เส้นเวลาประวัติการศึกษา */
+.edu-section {
+    margin-top: 5rem;
+}
+
 .timeline {
+    max-width: 650px;
+    margin: 0 auto;
     position: relative;
-    max-width: 600px;
-    margin-top: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-green), rgba(15,118,110,0.1));
 }
 
 .timeline-item {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
+    position: relative;
+    margin-bottom: 2.5rem;
 }
 
-.step {
-    background: #0d9488;
-    color: white;
+.timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 0.3rem;
     width: 32px;
     height: 32px;
     border-radius: 50%;
+    background: var(--primary-green);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    flex-shrink: 0;
-    margin-top: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 0 0 4px var(--white), 0 0 12px rgba(15,118,110,0.3);
 }
 
 .timeline-content {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    background: var(--white);
+    padding: 1.5rem 2rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.edu-level {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+}
+
+.edu-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.edu-school {
+    font-size: 0.95rem;
+    color: var(--text-light);
 }
 
 /* ปรับสำหรับมือถือ */
 @media (max-width: 768px) {
-    .about-container {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .about-grid {
         grid-template-columns: 1fr;
     }
-    .nav-links {
-        gap: 1rem;
+    .nav-menu {
+        gap: 0.8rem;
         font-size: 0.8rem;
+    }
+    .card {
+        padding: 1.5rem;
+    }
+    .card-footer {
+        position: static;
+        margin-top: 2rem;
     }
 }
