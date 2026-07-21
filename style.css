@@ -1,0 +1,135 @@
+/* ตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* แถบเมนู */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    background-color: #0d9488;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #334155;
+    font-size: 0.9rem;
+}
+
+.btn-recruit {
+    background-color: #0d9488;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+/* ส่วนเนื้อหา */
+.section {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #0d9488;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+}
+
+.bio-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.motive-card {
+    background: #065f46;
+    color: white;
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+/* เส้นเวลาประวัติการศึกษา */
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.step {
+    background: #0d9488;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ปรับสำหรับมือถือ */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+}
