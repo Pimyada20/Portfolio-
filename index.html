@@ -3,56 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>พอร์ตโฟลิโอของฉัน</title>
-    <!-- เชื่อมต่อไฟล์ตกแต่ง -->
+    <title>พอร์ตโฟลิโอ - พิมพ์ญาดา มีสื้อ</title>
     <link rel="stylesheet" href="style.css">
+    <!-- ฟอนต์เหมือนตัวอย่าง -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- แถบเมนูนำทาง -->
-    <nav class="navbar">
-        <div class="logo">SU</div>
-        <ul class="nav-links">
-            <li><a href="#home">หน้าแรก</a></li>
-            <li><a href="#about">ประวัติส่วนตัว</a></li>
-            <li><a href="#education">ประวัติการศึกษา</a></li>
-            <li><a href="#works">แฟ้มผลงาน</a></li>
-            <li><a href="#contact">ช่องทางติดต่อ</a></li>
-            <li><a href="#" class="btn-recruit">SU_RECRUIT_2026</a></li>
-        </ul>
-    </nav>
-
-    <!-- ส่วนประวัติส่วนตัว -->
-    <section id="about" class="section">
-        <h2>ประวัติส่วนตัว</h2>
-        <div class="about-container">
-            <div class="bio-card">
-                <h3>ข้อมูลผู้สมัครเรียน</h3>
-                <p><strong>ชื่อ-นามสกุล:</strong> นางสาวพิมพ์ญาดา มีเลี้ยง</p>
-                <p><strong>โรงเรียน:</strong> กระทุ่มแบน "วิเศษสมุทคุณ"</p>
-                <p><strong>แผนการเรียน:</strong> คณิต-อังกฤษ</p>
-            </div>
-            <div class="motive-card">
-                <h3>เป้าหมายสูงสุดในการศึกษาต่อ</h3>
-                <p>"เป้าหมายสูงสุดของการเรียนต่อ ไม่ใช่แค่การได้มาซึ่งปริญญา แต่คือการได้หล่อหลอมตนเองในสถาบันที่มีคุณภาพอย่าง มหาวิทยาลัยเกษตรศาสตร์ เพื่อเปลี่ยนความชอบให้กลายเป็นความชำนาญ และต่อยอดไปสู่เส้นทางอาชีพที่ตั้งใจไว้อย่างสมบูรณ์"</p>
-            </div>
+    <!-- แถบเมนูด้านบน -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">SU</div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">หน้าแรก</a>
+                <a href="#about" class="nav-link">ประวัติส่วนตัว</a>
+                <a href="#education" class="nav-link">ประวัติการศึกษา</a>
+                <a href="#works" class="nav-link">แฟ้มผลงาน</a>
+                <a href="#contact" class="nav-link">ช่องทางติดต่อ</a>
+                <a href="#" class="btn-recruit">SU_RECRUIT_2026</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- ส่วนประวัติการศึกษา -->
-    <section id="education" class="section">
-        <h2>ประวัติการศึกษา</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <span class="step">2</span>
-                <div class="timeline-content">
-                    <h4>ระดับมัธยมศึกษาตอนปลาย</h4>
-                    <p>โรงเรียนกระทุ่มแบน "วิเศษสุบคุณ"</p>
+    <main>
+        <!-- ส่วนประวัติส่วนตัว -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">ประวัติส่วนตัว</h2>
+                <div class="about-grid">
+                    <div class="card bio-card">
+                        <h3 class="card-subtitle">STUDIO BIO-DATA</h3>
+                        <h4 class="card-title">ข้อมูลผู้สมัครเรียน</h4>
+                        <div class="bio-row">
+                            <span class="bio-label">ชื่อ-นามสกุล :</span>
+                            <span class="bio-value">นางสาวพิมพ์ญาดา มีเลี้ยง</span>
+                        </div>
+                        <div class="bio-row">
+                            <span class="bio-label">โรงเรียน :</span>
+                            <span class="bio-value">กระทุ่มแบน "วิเศษสุบคุณ"</span>
+                        </div>
+                        <div class="bio-row">
+                            <span class="bio-label">แผนการเรียน :</span>
+                            <span class="bio-value">คณิต-อังกฤษ</span>
+                        </div>
+                        <p class="card-footer">MEMBER RECORD // SU APPLICANT</p>
+                    </div>
+
+                    <div class="card motive-card">
+                        <h3 class="card-subtitle">TARGET MOTIVE</h3>
+                        <h4 class="card-title">เป้าหมายสูงสุดในการศึกษาต่อ</h4>
+                        <p class="motive-text">
+“ฉันเชื่อว่าทุกโอกาสในการเรียนรู้จะช่วยให้เราเติบโตขึ้น การได้เป็นส่วนหนึ่งของมหาวิทยาลัยเกษตรศาสตร์จึงเป็นอีกหนึ่งเป้าหมายที่อยากทำให้สำเร็จ เพราะที่นี่จะช่วยให้ฉันได้พัฒนาความรู้ ทักษะ และก้าวเข้าใกล้ความฝันของตัวเองมากขึ้น”
+                        </p>
+                        <p class="card-footer">EDUCATIONAL MINDSET <span>BY PIMYADA 💚 </span></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- เชื่อมต่อไฟล์สคริปต์ -->
-    <script src="script.js"></script>
+        <!-- ส่วนประวัติการศึกษา -->
+        <section id="education" class="section edu-section">
+            <div class="container">
+                <p class="section-tag">EDUCATION</p>
+                <h2 class="section-title">ประวัติการศึกษา</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot">2</div>
+                        <div class="timeline-content">
+                            <p class="edu-level">HIGH SCHOOL</p>
+                            <h4 class="edu-title">ระดับมัธยมศึกษาตอนปลาย</h4>
+                            <p class="edu-school">โรงเรียนกระทุ่มแบน "วิเศษสุบคุณ"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
