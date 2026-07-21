@@ -1,3 +1,4 @@
+/* ตั้งค่าพื้นฐาน */
 * {
     margin: 0;
     padding: 0;
@@ -6,35 +7,47 @@
 }
 
 :root {
-    --primary-green: #0F766E;
-    --dark-green: #064E3B;
-    --light-green: #D1FAE5;
+    --primary: #0F766E;
+    --primary-dark: #064E3B;
+    --primary-light: #D1FAE5;
+    --accent: #CA8A04;
     --text-dark: #1E293B;
     --text-light: #64748B;
-    --bg-light: #F8FAFC;
-    --white: #FFFFFF;
+    --bg-main: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --border: #E2E8F0;
 }
 
 body {
-    background-color: var(--bg-light);
+    background-color: var(--bg-main);
     background-image: 
-        linear-gradient(rgba(15, 118, 110, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15, 118, 110, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
+        linear-gradient(rgba(15, 118, 110, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 118, 110, 0.06) 1px, transparent 1px);
+    background-size: 36px 36px;
     color: var(--text-dark);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* แถบเมนูเหมือนต้นแบบ */
 .navbar {
-    background: var(--white);
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    padding: 0.8rem 0;
     position: sticky;
     top: 0;
     z-index: 999;
+    border-bottom: 1px solid rgba(15,118,110,0.1);
+    border-radius: 0 0 20px 20px;
+    margin: 0 1rem;
 }
 
-.nav-container {
+.nav-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -42,93 +55,255 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.logo {
-    background: var(--primary-green);
-    color: var(--white);
-    width: 34px;
-    height: 34px;
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.brand-logo {
+    background: var(--primary);
+    color: white;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
     font-size: 0.9rem;
 }
 
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-top: 0.5rem;
-}
-
-.nav-link {
+.nav-links a {
     text-decoration: none;
     color: var(--text-dark);
-    font-size: 0.9rem;
-    font-weight: 400;
     transition: color 0.2s;
 }
 
-.nav-link:hover {
-    color: var(--primary-green);
+.nav-links a:hover {
+    color: var(--primary);
 }
 
 .btn-recruit {
-    background: var(--primary-green);
-    color: var(--white) !important;
-    padding: 0.5rem 1.1rem;
+    background: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
     font-weight: 500;
 }
 
+/* ส่วนหัวแต่ละหน้า */
 .section {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-}
-
-.section-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid var(--primary-green);
-    display: inline-block;
+    padding: 4rem 0;
 }
 
 .section-tag {
     text-align: center;
     color: var(--text-light);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    font-size: 0.9rem;
+}
+
+.icon-heading {
+    color: var(--primary);
+    margin-right: 0.5rem;
+}
+
+/* หน้าแรก */
+.home-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.home-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(15,118,110,0.1);
+    color: var(--primary);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.home-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.4;
     margin-bottom: 0.5rem;
 }
 
+.home-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.line {
+    flex: 1;
+    height: 2px;
+    background: var(--accent);
+    max-width: 60px;
+}
+
+.home-desc {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--text-dark);
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.home-card-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home-card {
+    background: white;
+    width: 280px;
+    height: 320px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 0 var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.card-badge {
+    background: var(--accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ประวัติส่วนตัว */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 1.8rem;
+    margin-top: 2rem;
 }
 
 .card {
     padding: 2rem;
-    border-radius: 18px;
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
 }
 
-.card-subtitle {
+.card-sub {
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 0.3rem;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .card-title {
@@ -137,109 +312,128 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.card-footer {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 2rem;
-    font-size: 0.75rem;
-    opacity: 0.7;
-}
-
-.card-footer span {
-    float: right;
-}
-
 .bio-card {
-    background: var(--white);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
-.bio-row {
-    display: flex;
+.bio-list {
+    margin-bottom: 2rem;
+}
+
+.bio-item {
     margin-bottom: 1rem;
     font-size: 0.95rem;
+    display: flex;
     flex-wrap: wrap;
     gap: 0.3rem;
 }
 
 .bio-label {
     font-weight: 500;
-    width: 120px;
-    flex-shrink: 0;
+    min-width: 120px;
+}
+
+.bio-value {
+    color: var(--text-dark);
+}
+
+.card-footer {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+    font-size: 0.75rem;
+    color: var(--text-light);
 }
 
 .motive-card {
-    background: var(--dark-green);
-    color: var(--white);
+    background: var(--primary-dark);
+    color: white;
     box-shadow: 0 4px 16px rgba(6,78,59,0.2);
 }
 
 .motive-text {
     font-size: 1rem;
     line-height: 1.8;
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 2;
+    margin-bottom: 2.5rem;
 }
 
-.motive-card::after {
-    content: "";
+.motive-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    opacity: 0.8;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,0.05);
-    clip-path: circle(30% at right 70%);
+    bottom: 1.5rem;
+    left: 2rem;
+    right: 2rem;
 }
 
-.edu-section {
-    margin-top: 5rem;
-}
-
+/* ประวัติการศึกษา */
 .timeline {
-    max-width: 650px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 3rem auto 0;
     position: relative;
-    padding-left: 2rem;
 }
 
 .timeline::before {
     content: "";
     position: absolute;
-    left: 15px;
+    left: 50%;
     top: 0;
     height: 100%;
     width: 2px;
-    background: linear-gradient(to bottom, var(--primary-green), rgba(15,118,110,0.1));
+    background: linear-gradient(to bottom, var(--primary), rgba(15,118,110,0.1));
+    transform: translateX(-50%);
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
+    width: 50%;
+}
+
+.timeline-item.left {
+    left: 0;
+    padding-right: 2.5rem;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    padding-left: 2.5rem;
 }
 
 .timeline-dot {
     position: absolute;
-    left: -2rem;
-    top: 0.3rem;
+    top: 1rem;
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: var(--primary-green);
-    color: var(--white);
+    background: var(--primary);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
     font-size: 0.9rem;
-    box-shadow: 0 0 0 4px var(--white), 0 0 12px rgba(15,118,110,0.3);
+    box-shadow: 0 0 0 4px white, 0 0 12px rgba(15,118,110,0.3);
+}
+
+.timeline-item.left .timeline-dot {
+    right: -16px;
+    transform: translateX(50%);
+}
+
+.timeline-item.right .timeline-dot {
+    left: -16px;
+    transform: translateX(-50%);
 }
 
 .timeline-content {
-    background: var(--white);
-    padding: 1.5rem 2rem;
-    border-radius: 14px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 
@@ -262,25 +456,167 @@ body {
     color: var(--text-light);
 }
 
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        padding: 1rem;
+/* 📸 แฟ้มผลงาน + รูปภาพ */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.portfolio-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s;
+    border: 1px solid rgba(15,118,110,0.1);
+    overflow: hidden;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: #f1f5f9;
+}
+
+.portfolio-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+
+.card-page {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ช่องทางติดต่อ */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 2rem auto 0;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    border: 1px solid rgba(15,118,110,0.1);
+    transition: all 0.2s;
+}
+
+.contact-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.fb {
+    background: #1877F2;
+}
+
+.ig {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.contact-title {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* ส่วนท้าย */
+.footer {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    border-top: 1px solid rgba(15,118,110,0.1);
+}
+
+/* ปรับสำหรับมือถือ/ไอแพด */
+@media (max-width: 992px) {
+    .home-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .home-card-wrapper {
+        justify-content: center;
+    }
+    .home-buttons {
+        justify-content: center;
     }
     .about-grid {
         grid-template-columns: 1fr;
     }
-    .nav-menu {
+    .timeline::before {
+        left: 2rem;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 4rem !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+    }
+    .timeline-dot {
+        left: 2rem !important;
+        transform: translateX(-50%) !important;
+        right: auto !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
         gap: 0.8rem;
         font-size: 0.8rem;
     }
-    .card {
-        padding: 1.5rem;
+    .home-title {
+        font-size: 2rem;
     }
-    .card-footer {
-        position: static;
-        margin-top: 2rem;
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-img {
+        height: 200px;
     }
 }
