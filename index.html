@@ -135,7 +135,7 @@
                         </div>
                         <div class="bio-item">
                             <span class="bio-label">ช่วงเวลา :</span>
-                            <span class="bio-value">[ ทุกวันหยุดเสาร์-อาทิตย์ มีนาคม - พฤษภาคม2568,2569]</span>
+                            <span class="bio-value">[ ทุกวันหยุดเสาร์-อาทิตย์ , ปิดเทอม มีนาคม - พฤษภาคม 2568,2569]</span>
                         </div>
                         <div class="bio-item">
                             <span class="bio-label">ตำแหน่ง/หน้าที่ :</span>
@@ -251,3 +251,57 @@
             </div>
         </div>
     </section>
+    <!-- ช่องทางติดต่อ -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <p class="section-tag">CONNECTIONS</p>
+            <h2 class="section-heading">ช่องทางการติดต่อ</h2>
+            <div class="contact-grid">
+                <a href="https://facebook.com/ชื่อบัญชีของคุณ" target="_blank" class="contact-card">
+                    <i class="fab fa-facebook-f contact-icon fb"></i>
+                    <div>
+                        <p class="contact-title">FACEBOOK</p>
+                        <p class="contact-value">[ ระบุชื่อบัญชี ]</p>
+                    </div>
+                </a>
+                <a href="https://instagram.com/ชื่อบัญชีของคุณ" target="_blank" class="contact-card">
+                    <i class="fab fa-instagram contact-icon ig"></i>
+                    <div>
+                        <p class="contact-title">INSTAGRAM</p>
+                        <p class="contact-value">[ ระบุชื่อบัญชี ]</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนท้าย -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PIMYADA MEESEU. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <!-- 📜 สคริปต์กดไลก์ -->
+    <script>
+        function toggleLike(btn) {
+            const icon = btn.querySelector('i');
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                icon.style.color = '#EF4444';
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                icon.style.color = 'inherit';
+            }
+        }
+        // เปิดรูปเต็มเมื่อคลิก
+        document.querySelectorAll('.card-img').forEach(img => {
+            img.addEventListener('click', () => {
+                window.open(img.src, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
