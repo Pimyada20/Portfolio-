@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO - พิมพ์ญาดา มีเลี้ยง</title>
+    <title>พอร์ตโฟลิโอ - พิมพ์ญาดา มีเลี้ยง</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!----- 🎯 แถบเมนูช่องสี่เหลี่ยมเหมือนตัวอย่างเป๊ะ ----->
+    <!-- 🎯 แถบเมนูช่องสี่เหลี่ยมเหมือนตัวอย่างเป๊ะ -->
     <nav class="navbar">
         <div class="nav-wrapper">
             <div class="nav-brand">
@@ -37,7 +37,7 @@
                     ขอต้อนรับคณะกรรมการเข้าสู่พื้นที่ถ่ายทอดตัวตนของฉันค่ะ แฟ้มสะสมผลงานเล่มนี้สะท้อนถึงการเรียนรู้ ประสบการณ์ และความพร้อมที่จะนำความรู้มาต่อยอดพัฒนาตนเองใน มหาวิทยาลัยเกษตรศาสตร์ แห่งนี้ค่ะ
                 </p>
                 <div class="home-buttons">
-                    <a href="#portfolio" class="btn btn-primary">รวบรวมผลงาน<i class="fas fa-arrow-right"></i></a>
+                    <a href="#portfolio" class="btn btn-primary">รวบรวมผลงานและผล <i class="fas fa-arrow-right"></i></a>
                     <a href="#about" class="btn btn-secondary">เป้าหมาย</a>
                 </div>
             </div>
@@ -78,11 +78,12 @@
                     <h3 class="card-sub">TARGET MOTIVE</h3>
                     <h4 class="card-title">เป้าหมายสูงสุดในการศึกษาต่อ</h4>
                     <p class="motive-text">
-                        “ฉันเชื่อว่าทุกโอกาสในการเรียนรู้จะช่วยให้เราเติบโตขึ้น การได้เป็นส่วนหนึ่งของมหาวิทยาลัยเกษตรศาสตร์จึงเป็นอีกหนึ่งเป้าหมายที่อยากทำให้สำเร็จ เพราะที่นี่จะช่วยให้ฉันได้พัฒนาความรู้ ทักษะ และก้าวเข้าใกล้ความฝันของตัวเองมากขึ้น”
+                        "เป้าหมายสูงสุดของการเรียนต่อ ไม่ใช่แค่การได้มาซึ่งปริญญา แต่คือการได้หล่อหลอมตนเองในสถาบันที่มีคุณภาพอย่าง มหาวิทยาลัยเกษตรศาสตร์ 
+                        เพื่อเปลี่ยนความชอบให้กลายเป็นความชำนาญ และต่อยอดไปสู่เส้นทางอาชีพที่ตั้งใจไว้อย่างสมบูรณ์"
                     </p>
                     <div class="motive-footer">
                         <span>EDUCATIONAL MINDSET</span>
-                        <span>BY PIMYADA 💚</span>
+                        <span>BY PIMYADA 🌧️💚</span>
                     </div>
                 </div>
             </div>
@@ -194,22 +195,42 @@
                     <p class="card-page">CATALOG_PAGE_07</p>
                 </div>
                 <div class="portfolio-card">
-                    <img src="image/page8.jpg" alt="ผลงานหน้า 8" class="card-img">
+                    <div class="card-inner">
+                        <img src="image/page8.jpg" alt="ผลงานหน้า 8" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
                     <h3>Page 8</h3>
                     <p class="card-page">CATALOG_PAGE_08</p>
                 </div>
                 <div class="portfolio-card">
-                    <img src="image/page9.jpg" alt="ผลงานหน้า 9" class="card-img">
+                    <div class="card-inner">
+                        <img src="image/page9.jpg" alt="ผลงานหน้า 9" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
                     <h3>Page 9</h3>
                     <p class="card-page">CATALOG_PAGE_09</p>
                 </div>
                 <div class="portfolio-card">
-                    <img src="image/page10.jpg" alt="ผลงานหน้า 10" class="card-img">
+                    <div class="card-inner">
+                        <img src="image/page10.jpg" alt="ผลงานหน้า 10" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
                     <h3>Page 10</h3>
                     <p class="card-page">CATALOG_PAGE_10</p>
                 </div>
                 <div class="portfolio-card">
-                    <img src="image/page11.jpg" alt="ผลงานหน้า 11" class="card-img">
+                    <div class="card-inner">
+                        <img src="image/page11.jpg" alt="ผลงานหน้า 11" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
                     <h3>Page 11</h3>
                     <p class="card-page">CATALOG_PAGE_11</p>
                 </div>
@@ -223,18 +244,18 @@
             <p class="section-tag">CONNECTIONS</p>
             <h2 class="section-heading">ช่องทางการติดต่อ</h2>
             <div class="contact-grid">
-                <a href="https://www.facebook.com/Pimyada Meeliang" target="_blank" class="contact-card">
+                <a href="https://facebook.com/ชื่อบัญชีของคุณ" target="_blank" class="contact-card">
                     <i class="fab fa-facebook-f contact-icon fb"></i>
                     <div>
                         <p class="contact-title">FACEBOOK</p>
-                        <p class="contact-value">Pimyada Meeliang</p>
+                        <p class="contact-value">[ Pimyada Meeliang ]</p>
                     </div>
                 </a>
-                <a href="https://www.instagram.com/ppiimmyada_" target="_blank" class="contact-card">
+                <a href="https://instagram.com/ชื่อบัญชีของคุณ" target="_blank" class="contact-card">
                     <i class="fab fa-instagram contact-icon ig"></i>
                     <div>
                         <p class="contact-title">INSTAGRAM</p>
-                        <p class="contact-value">ppiimmyada_</p>
+                        <p class="contact-value">[ ppiimmyada_ ]</p>
                     </div>
                 </a>
             </div>
@@ -244,8 +265,30 @@
     <!-- ส่วนท้าย -->
     <footer class="footer">
         <div class="container">
-            <p>© 2026 PIMYADA MEELIANG. ALL RIGHTS RESERVED.</p>
+            <p>© 2026 PIMYADA MEESEU. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
+
+    <!-- 📜 สคริปต์กดไลก์ -->
+    <script>
+        function toggleLike(btn) {
+            const icon = btn.querySelector('i');
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                icon.style.color = '#EF4444';
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                icon.style.color = 'inherit';
+            }
+        }
+        // เปิดรูปเต็มเมื่อคลิก
+        document.querySelectorAll('.card-img').forEach(img => {
+            img.addEventListener('click', () => {
+                window.open(img.src, '_blank');
+            });
+        });
+    </script>
 </body>
 </html>
