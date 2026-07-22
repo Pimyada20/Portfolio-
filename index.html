@@ -1,23 +1,180 @@
-    <!-- สคริปต์กดไลก์ -->
-    <script>
-        function toggleLike(btn) {
-            const icon = btn.querySelector('i');
-            if (icon.classList.contains('far')) {
-                icon.classList.remove('far');
-                icon.classList.add('fas');
-                icon.style.color = '#EF4444';
-            } else {
-                icon.classList.remove('fas');
-                icon.classList.add('far');
-                icon.style.color = 'inherit';
-            }
-        }
-        // เปิดรูปเต็มเมื่อคลิก
-        document.querySelectorAll('.card-img').forEach(img => {
-            img.addEventListener('click', () => {
-                window.open(img.src, '_blank');
-            });
-        });
-    </script>
-</body>
-</html>
+<!-- หน้าแรก -->
+<section id="home" class="section home-section">
+    <div class="container home-container">
+        <!-- 📝 ข้อความด้านซ้าย เหมือนเดิมเป๊ะ -->
+        <div class="home-content">
+            <span class="badge">KASETSART UNIVERSITY ADMISSION</span>
+            <h1 class="home-title">นางสาวพิมพ์ญาดา มีเลี้ยง</h1>
+            <p class="home-subtitle">PORTFOLIO FOR EDUCATION <span class="line"></span></p>
+            <p class="home-desc">
+                ขอต้อนรับคณะกรรมการเข้าสู่พื้นที่ถ่ายทอดตัวตนของฉันค่ะ แฟ้มสะสมผลงานเล่มนี้สะท้อนถึงการเรียนรู้ ประสบการณ์ และความพร้อมที่จะนำความรู้มาต่อยอดพัฒนาตนเองใน มหาวิทยาลัยเกษตรศาสตร์ แห่งนี้ค่ะ
+            </p>
+            <div class="home-buttons">
+                <a href="#portfolio" class="btn btn-primary">รวบรวมผลงาน<i class="fas fa-arrow-right"></i></a>
+                <a href="#about" class="btn btn-secondary">เป้าหมาย</a>
+            </div>
+        </div>
+
+        <!-- 🖼️ กรอบรูปด้านขวา เพิ่มรูปได้เลย -->
+        <div class="home-card-wrapper">
+            <div class="home-card">
+                <!-- แก้ชื่อรูปตรงนี้ได้เลย -->
+                <img src="image/profile.jpg" alt="รูปประจำตัว" class="card-img">
+                <span class="card-text">PIMYADA</span>
+                <span class="card-badge">PIMYADA</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ประวัติส่วนตัว -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-heading">ประวัติส่วนตัว</h2>
+            <div class="about-grid">
+                <div class="card bio-card">
+                    <h3 class="card-sub">STUDIO BIO-DATA</h3>
+                    <h4 class="card-title">ข้อมูลผู้สมัครเรียน</h4>
+                    <div class="bio-list">
+                        <div class="bio-item">
+                            <span class="bio-label">ชื่อ-นามสกุล :</span>
+                            <span class="bio-value">นางสาวพิมพ์ญาดา มีเลี้ยง</span>
+                        </div>
+                        <div class="bio-item">
+                            <span class="bio-label">โรงเรียน :</span>
+                            <span class="bio-value">กระทุ่มแบน "วิเศษสมุทคุณ"</span>
+                        </div>
+                        <div class="bio-item">
+                            <span class="bio-label">แผนการเรียน :</span>
+                            <span class="bio-value">คณิต-อังกฤษ</span>
+                        </div>
+                    </div>
+                    <p class="card-footer">MEMBER RECORD // KU APPLICANT</p>
+                </div>
+                <div class="card motive-card">
+                    <h3 class="card-sub">TARGET MOTIVE</h3>
+                    <h4 class="card-title">เป้าหมายสูงสุดในการศึกษาต่อ</h4>
+                    <p class="motive-text">
+                        “ฉันเชื่อว่าทุกโอกาสในการเรียนรู้จะช่วยให้เราเติบโตขึ้น การได้เป็นส่วนหนึ่งของมหาวิทยาลัยเกษตรศาสตร์จึงเป็นอีกหนึ่งเป้าหมายที่อยากทำให้สำเร็จ เพราะที่นี่จะช่วยให้ฉันได้พัฒนาความรู้ ทักษะ และก้าวเข้าใกล้ความฝันของตัวเองมากขึ้น”
+                    </p>
+                    <div class="motive-footer">
+                        <span>EDUCATIONAL MINDSET</span>
+                        <span>BY PIMYADA 💚</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ประวัติการศึกษา -->
+    <section id="education" class="section edu-section">
+        <div class="container">
+            <p class="section-tag">EDUCATION</p>
+            <h2 class="section-heading">ประวัติการศึกษา</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <p class="edu-level">MIDDLE SCHOOL</p>
+                        <h4 class="edu-title">ระดับมัธยมศึกษาตอนต้น</h4>
+                        <p class="edu-school">โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</p>
+                    </div>
+                    <div class="timeline-dot">1</div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-content">
+                        <p class="edu-level">HIGH SCHOOL</p>
+                        <h4 class="edu-title">ระดับมัธยมศึกษาตอนปลาย</h4>
+                        <p class="edu-school">โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📸 แฟ้มผลงาน กดดูรูปได้เหมือนตัวอย่าง -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <p class="section-tag">PORTFOLIO</p>
+            <h2 class="section-heading">แฟ้มสะสมผลงาน</h2>
+            <p class="section-desc">[ คลิกที่การ์ดเพื่อเปิดดูรูปภาพเต็ม / กดไอคอนหัวใจเพื่อไลก์ ]</p>
+            <div class="portfolio-grid">
+                <!-- กดที่การ์ดจะเปิดรูป กดหัวใจจะไลก์ -->
+                <div class="portfolio-card">
+                    <div class="card-inner">
+                        <img src="image/page1.jpg" alt="ผลงานหน้า 1" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Page 1</h3>
+                    <p class="card-page">CATALOG_PAGE_01</p>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-inner">
+                        <img src="image/page2.jpg" alt="ผลงานหน้า 2" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Page 2</h3>
+                    <p class="card-page">CATALOG_PAGE_02</p>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-inner">
+                        <img src="image/page3.jpg" alt="ผลงานหน้า 3" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Page 3</h3>
+                    <p class="card-page">CATALOG_PAGE_03</p>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-inner">
+                        <img src="image/page4.jpg" alt="ผลงานหน้า 4" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Page 4</h3>
+                    <p class="card-page">CATALOG_PAGE_04</p>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-inner">
+                        <img src="image/page5.jpg" alt="ผลงานหน้า 5" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Page 5</h3>
+                    <p class="card-page">CATALOG_PAGE_05</p>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-inner">
+                        <img src="image/page6.jpg" alt="ผลงานหน้า 6" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Page 6</h3>
+                    <p class="card-page">CATALOG_PAGE_06</p>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-inner">
+                        <img src="image/page7.jpg" alt="ผลงานหน้า 7" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Page 7</h3>
+                    <p class="card-page">CATALOG_PAGE_07</p>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-inner">
+                        <img src="image/page8.jpg" alt="ผลงานหน้า 8" class="card-img" loading="lazy">
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+            
