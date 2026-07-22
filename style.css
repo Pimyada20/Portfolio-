@@ -1,3 +1,4 @@
+/* ตั้งค่าพื้นฐาน */
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +9,11 @@
 :root {
     --primary: #0F766E;
     --primary-dark: #064E3B;
+    --primary-light: #D1FAE5;
     --accent: #CA8A04;
     --text-dark: #1E293B;
     --text-light: #64748B;
-    --bg-main: #F0FDF9;
+    --bg-main: #F8FAFC;
     --bg-card: #FFFFFF;
     --border: #E2E8F0;
 }
@@ -32,23 +34,23 @@ body {
     padding: 0 1.5rem;
 }
 
-/* 🎯 แถบเมนูช่องสี่เหลี่ยมเหมือนตัวอย่าง */
+/* แถบเมนูเหมือนต้นแบบ */
 .navbar {
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(10px);
-    padding: 0.7rem 0;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    padding: 0.8rem 0;
     position: sticky;
     top: 0;
     z-index: 999;
-    border-radius: 0 0 24px 24px;
+    border-bottom: 1px solid rgba(15,118,110,0.1);
+    border-radius: 0 0 20px 20px;
     margin: 0 1rem;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 
 .nav-wrapper {
-    max-width: 1150px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.2rem;
+    padding: 0 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,7 +64,6 @@ body {
     gap: 0.5rem;
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--primary);
 }
 
 .brand-logo {
@@ -70,7 +71,7 @@ body {
     color: white;
     width: 32px;
     height: 32px;
-    border-radius: 8px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,22 +80,20 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 1.2rem;
+    list-style: none;
+    gap: 1.5rem;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
 }
 
-.nav-link {
+.nav-links a {
     text-decoration: none;
     color: var(--text-dark);
-    padding: 0.4rem 0.6rem;
-    border-radius: 12px;
-    transition: all 0.2s;
+    transition: color 0.2s;
 }
 
-.nav-link:hover {
-    background: rgba(15,118,110,0.1);
+.nav-links a:hover {
     color: var(--primary);
 }
 
@@ -102,11 +101,11 @@ body {
     background: var(--primary);
     color: white !important;
     padding: 0.5rem 1rem;
-    border-radius: 16px;
+    border-radius: 20px;
     font-weight: 500;
 }
 
-/* ส่วนหัว */
+/* ส่วนหัวแต่ละหน้า */
 .section {
     padding: 4rem 0;
 }
@@ -146,6 +145,11 @@ body {
     color: var(--text-light);
     margin-bottom: 2.5rem;
     font-size: 0.9rem;
+}
+
+.icon-heading {
+    color: var(--primary);
+    margin-right: 0.5rem;
 }
 
 /* หน้าแรก */
@@ -229,10 +233,19 @@ body {
     color: white;
 }
 
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
 .btn-secondary {
     background: white;
     color: var(--text-dark);
     border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .home-card-wrapper {
@@ -281,12 +294,14 @@ body {
     padding: 2rem;
     border-radius: 20px;
     position: relative;
+    overflow: hidden;
 }
 
 .card-sub {
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-bottom: 0.3rem;
     opacity: 0.7;
 }
@@ -302,8 +317,13 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
+.bio-list {
+    margin-bottom: 2rem;
+}
+
 .bio-item {
     margin-bottom: 1rem;
+    font-size: 0.95rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.3rem;
@@ -312,6 +332,10 @@ body {
 .bio-label {
     font-weight: 500;
     min-width: 120px;
+}
+
+.bio-value {
+    color: var(--text-dark);
 }
 
 .card-footer {
@@ -325,9 +349,12 @@ body {
 .motive-card {
     background: var(--primary-dark);
     color: white;
+    box-shadow: 0 4px 16px rgba(6,78,59,0.2);
 }
 
 .motive-text {
+    font-size: 1rem;
+    line-height: 1.8;
     margin-bottom: 2.5rem;
 }
 
@@ -389,26 +416,47 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    box-shadow: 0 0 0 4px white;
+    font-size: 0.9rem;
+    box-shadow: 0 0 0 4px white, 0 0 12px rgba(15,118,110,0.3);
 }
 
-.timeline-item.left .timeline-dot { right: -16px; transform: translateX(50%); }
-.timeline-item.right .timeline-dot { left: -16px; transform: translateX(-50%); }
+.timeline-item.left .timeline-dot {
+    right: -16px;
+    transform: translateX(50%);
+}
+
+.timeline-item.right .timeline-dot {
+    left: -16px;
+    transform: translateX(-50%);
+}
 
 .timeline-content {
     background: white;
     padding: 1.5rem;
     border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 
 .edu-level {
     font-size: 0.8rem;
     color: var(--text-light);
     text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-bottom: 0.3rem;
 }
 
-/* 📸 แฟ้มผลงาน การ์ดเหมือนตัวอย่าง */
+.edu-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.edu-school {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+/* 📸 แฟ้มผลงาน + รูปภาพ */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -419,55 +467,29 @@ body {
 .portfolio-card {
     background: white;
     border-radius: 16px;
-    padding: 1rem 1rem 1.5rem;
-    text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s;
     border: 1px solid rgba(15,118,110,0.1);
+    overflow: hidden;
 }
 
-.card-inner {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    cursor: pointer;
+.portfolio-card:hover {
+    transform: translateY(-5px);
 }
 
 .card-img {
     width: 100%;
     height: 280px;
     object-fit: cover;
-    background: #f8fafc;
-    transition: transform 0.3s;
-}
-
-.card-inner:hover .card-img {
-    transform: scale(1.03);
-}
-
-.like-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(255,255,255,0.9);
-    border: none;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    transition: all 0.2s;
-}
-
-.like-btn:hover {
-    transform: scale(1.1);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: #f1f5f9;
 }
 
 .portfolio-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary);
     margin-bottom: 0.3rem;
@@ -477,9 +499,10 @@ body {
     font-size: 0.75rem;
     color: var(--text-light);
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* 📞 ช่องทางติดต่อ เหมือนตัวอย่าง */
+/* ช่องทางติดต่อ */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -489,8 +512,7 @@ body {
 }
 
 .contact-card {
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(8px);
+    background: white;
     border-radius: 16px;
     padding: 1.5rem;
     display: flex;
@@ -498,13 +520,14 @@ body {
     gap: 1rem;
     text-decoration: none;
     color: inherit;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     border: 1px solid rgba(15,118,110,0.1);
     transition: all 0.2s;
 }
 
 .contact-card:hover {
-    transform: translateY(-3px);
     border-color: var(--primary);
+    transform: translateY(-3px);
 }
 
 .contact-icon {
@@ -518,13 +541,19 @@ body {
     color: white;
 }
 
-.fb { background: #1877F2; }
-.ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.fb {
+    background: #1877F2;
+}
+
+.ig {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
 
 .contact-title {
     font-size: 0.8rem;
     color: var(--text-light);
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .contact-value {
@@ -541,19 +570,53 @@ body {
     border-top: 1px solid rgba(15,118,110,0.1);
 }
 
-/* ปรับมือถือ */
+/* ปรับสำหรับมือถือ/ไอแพด */
 @media (max-width: 992px) {
-    .home-container, .about-grid { grid-template-columns: 1fr; text-align: center; }
-    .home-card-wrapper { justify-content: center; }
-    .home-buttons { justify-content: center; }
-    .timeline::before { left: 2rem; }
-    .timeline-item { width: 100%; padding-left: 4rem !important; padding-right: 0 !important; text-align: left !important; }
-    .timeline-dot { left: 2rem !important; transform: translateX(-50%) !important; right: auto !important; }
+    .home-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .home-card-wrapper {
+        justify-content: center;
+    }
+    .home-buttons {
+        justify-content: center;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .timeline::before {
+        left: 2rem;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 4rem !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+    }
+    .timeline-dot {
+        left: 2rem !important;
+        transform: translateX(-50%) !important;
+        right: auto !important;
+    }
 }
 
 @media (max-width: 576px) {
-    .nav-wrapper { flex-direction: column; align-items: flex-start; }
-    .nav-links { gap: 0.5rem; font-size: 0.8rem; }
-    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-    .card-img { height: 200px; }
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        gap: 0.8rem;
+        font-size: 0.8rem;
+    }
+    .home-title {
+        font-size: 2rem;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-img {
+        height: 200px;
+    }
 }
